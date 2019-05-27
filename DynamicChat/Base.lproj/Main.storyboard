@@ -26,10 +26,12 @@
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GaZ-Jb-hzr">
                                                 <rect key="frame" x="15" y="0.0" width="215" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0FH-kR-hbL"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,6 +48,9 @@
                                             <constraint firstAttribute="width" secondItem="xdW-2X-cMC" secondAttribute="height" multiplier="1:1" id="LXI-4D-FBr"/>
                                         </constraints>
                                         <state key="normal" image="send"/>
+                                        <connections>
+                                            <action selector="sendButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8gp-qN-w7a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,11 +71,33 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YFv-Eq-Fra">
+                                <rect key="frame" x="20" y="86" width="280" height="392"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wii-Ou-Tj8">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wii-Ou-Tj8" id="xPU-Ml-w2G">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ol3-qX-ZnF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pIp-kL-yKf"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.44228610080173375" green="0.72948287357446884" blue="0.86647911269430056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="O0P-3n-3Sg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="15V-Jx-lcL"/>
+                            <constraint firstItem="YFv-Eq-Fra" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QK3-NN-4P1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KIS-OQ-LWh" secondAttribute="trailing" id="Qd1-G4-Gl3"/>
+                            <constraint firstItem="YFv-Eq-Fra" firstAttribute="top" secondItem="O0P-3n-3Sg" secondAttribute="bottom" constant="10" id="Wab-QI-h5u"/>
+                            <constraint firstItem="KIS-OQ-LWh" firstAttribute="top" secondItem="YFv-Eq-Fra" secondAttribute="bottom" constant="20" id="ecB-dB-G9M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YFv-Eq-Fra" secondAttribute="trailing" constant="20" id="oRr-xc-Mhp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KIS-OQ-LWh" secondAttribute="bottom" constant="20" id="sb9-C6-GJJ"/>
                             <constraint firstItem="O0P-3n-3Sg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wR3-is-O2C"/>
                             <constraint firstItem="KIS-OQ-LWh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yym-tj-CyI"/>
@@ -79,6 +106,7 @@
                     </view>
                     <connections>
                         <outlet property="keyboardBottomAnchor" destination="sb9-C6-GJJ" id="tBs-7y-ZXD"/>
+                        <outlet property="questionTextField" destination="GaZ-Jb-hzr" id="E2B-15-e3S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

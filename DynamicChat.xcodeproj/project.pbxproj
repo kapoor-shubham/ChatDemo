@@ -15,6 +15,7 @@
 		5A89E9A5229BD8E100C252F2 /* DynamicChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89E9A4229BD8E100C252F2 /* DynamicChatTests.swift */; };
 		5A89E9B0229BD8E100C252F2 /* DynamicChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89E9AF229BD8E100C252F2 /* DynamicChatUITests.swift */; };
 		5A89E9C0229BE32000C252F2 /* CustomKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89E9BF229BE32000C252F2 /* CustomKeyboardView.swift */; };
+		5A89E9C2229BE8BE00C252F2 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89E9C1229BE8BE00C252F2 /* ChatTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5A89E9AF229BD8E100C252F2 /* DynamicChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicChatUITests.swift; sourceTree = "<group>"; };
 		5A89E9B1229BD8E100C252F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A89E9BF229BE32000C252F2 /* CustomKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboardView.swift; sourceTree = "<group>"; };
+		5A89E9C1229BE8BE00C252F2 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				5A89E98F229BD8DE00C252F2 /* AppDelegate.swift */,
 				5A89E991229BD8DE00C252F2 /* ViewController.swift */,
+				5A89E9C1229BE8BE00C252F2 /* ChatTableViewCell.swift */,
 				5A89E9BF229BE32000C252F2 /* CustomKeyboardView.swift */,
 				5A89E993229BD8DE00C252F2 /* Main.storyboard */,
 				5A89E996229BD8E000C252F2 /* Assets.xcassets */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A89E992229BD8DE00C252F2 /* ViewController.swift in Sources */,
+				5A89E9C2229BE8BE00C252F2 /* ChatTableViewCell.swift in Sources */,
 				5A89E990229BD8DE00C252F2 /* AppDelegate.swift in Sources */,
 				5A89E9C0229BE32000C252F2 /* CustomKeyboardView.swift in Sources */,
 			);
